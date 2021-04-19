@@ -34,22 +34,6 @@ def load_words():
     return wordlist
 
 wordlist = load_words()
-def show_possible_matches(my_word):
-    '''
-    my_word: string with _ characters, current guess of secret word
-    returns: nothing, but should print out every word in wordlist that matches my_word
-             Keep in mind that in hangman when a letter is guessed, all the positions
-             at which that letter occurs in the secret word are revealed.
-             Therefore, the hidden letter(_ ) cannot be one of the letters in the word
-             that has already been revealed.
-
-    '''
-    wordlist = load_words()
-    lstwords = {}
-    for words in wordlist:
-          if match_with_gaps(my_word, words):
-                return lstwords.add(words)
-
 
 def choose_word(wordlist):
     """
